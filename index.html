@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+</head>
+
+<body>
+
+    <header>Weather Dashboard</header>
+
+    <div class="container">
+        
+        <div class="row">
+            <div class="col" id="cities">
+                <form id="city-form">
+                    <label>Enter a City</label>
+                    <input type="text" id="city-to-search">
+                    <button type="submit">Search</button>
+                </form>
+                <div>
+                    past city searches here...
+                </div>
+            </div>
+            <div class="col">
+                <div class="row" id="current-weather">Current weather goes here
+                    <!-- Current Weather -->
+                </div>
+                <div class="row" id="five-day">Five day forecast goes here
+                    <!-- 5 day forecast -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

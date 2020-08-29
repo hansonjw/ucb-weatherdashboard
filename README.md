@@ -7,6 +7,9 @@ Some research from the OpenWeather API:
 
 Please use your unique API key {appid=} in each API call to authorize a request from your application and process it appropriately.
 
+Information on the icons...
+https://openweathermap.org/weather-conditions
+
 
 
 
