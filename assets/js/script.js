@@ -1,10 +1,15 @@
-var cityEl = document.querySelector("#city-to-search");
-var cityFormEl = document.querySelector("#city-form");
+// DOM elements...
+var cityEl = document.querySelector("#city-to-search"); //
+
 var currentEl = document.querySelector("#current-weather");
 var fiveDayEl = document.querySelector("#five-day");
+var prevCitiesEl = document.querySelector("#prev-cities");  //
 
 // An object to store current queried city info
-var currentCityInfo = {}; 
+var currentCityInfo = {};
+
+// An object to store previous queried city info
+var previousCityInfo = {};
 
 // main data parsing function for the Weather day
 function parseWeatherData(weatherData, dataSource){
@@ -103,6 +108,11 @@ function getUvData(lat, lon){
             response.json().then(function(data) {
                 parseWeatherData(data, "uv");
                 console.log(currentCityInfo);
+                
+                //
+                // This is where you want to put the function call to "displayWeather()"
+                //
+
             });
         }
         else {
@@ -136,12 +146,16 @@ function getFiveDayData(city){
 }
 
 
-function displayWeather(){
+function displayCurrentWeather(){
     // umm code...
     var weatherToPost = document.createElement('div');
     //weatherToPost.textContent = ;
 
     currentEl.appendChild(weatherToPost);
+}
+
+function displayFiveDayForecast(){
+    // umm code...
 }
 
 
