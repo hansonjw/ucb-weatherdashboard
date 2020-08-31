@@ -1,18 +1,25 @@
 # weatherdashboard
 UCB Coding Bootcamp Assignment #06
+Submitted by Justin Hanson
 
-#######################################
+
+This application is a simple weather dashboard that allows a user to enter a City name then the dashboard will display current weather as well
+as a simple five day forecast.  This was an exercise in using 3rd party APIs and manipulating data in the background.
+
+The deployed website is available here:
+https://hansonjw.github.io/weatherdashboard/
+
+
 Some research from the OpenWeather API:
 #######################################
-
-Please use your unique API key {appid=} in each API call to authorize a request from your application and process it appropriately.
 
 Information on the icons...
 https://openweathermap.org/weather-conditions
 
 
 
-
+Below is the assigment Criteria for evaluation:
+###############################################
 # 06 Server-Side APIs: Weather Dashboard
 
 Use the [OpenWeather API](https://openweathermap.org/api) to retrieve weather data for cities.
