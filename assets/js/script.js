@@ -185,7 +185,7 @@ function displayFiveDayForecast(forecastArr){
 function displayCurrentWeather(aCity){
     // This is total brute force and I would look for another way to do this if I had time...
     // New solution would involve restructing the OBJECT that all of the data is stored in
-    // and utilizing loops and arrays
+    // and utilizing loops
 
 
     var cardName = document.createElement("h2");
@@ -259,6 +259,11 @@ function updateCityInfo() {
     // executes function to update sidebar display
     // update local storage by storing previousCityInfo
 
+    debugger;
+    jQuery(currentEl).empty();
+    jQuery(fiveDayEl).empty();
+    jQuery("#five-day-title").empty()
+
     var fromStorage = JSON.parse(localStorage.getItem("previousCityInfo"));
     console.log(fromStorage);
     if (fromStorage){
@@ -273,15 +278,9 @@ function updateCityInfo() {
         
         localStorage.setItem("previousCityInfo", JSON.stringify(previousCityInfo));
         currentCityInfo = {};
-
-        jQuery(currentEl).empty();
-        jQuery(fiveDayEl).empty();
         
         return;
     }
-    else{
-        return;
-    }   
 
 }
 
@@ -316,6 +315,10 @@ jQuery(prevCitiesEl).on("click", "button", function(){
     // Go get weather data
     getWeatherData(city);
     getFiveDayData(city);
+    
+    jQuery(currentEl).empty();
+    jQuery(fiveDayEl).empty();
+    jQuery("#five-day-title").empty()
 
 });
 
